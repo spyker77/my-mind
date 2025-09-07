@@ -1,0 +1,136 @@
+{{- if and .IsPage (eq .Section "thoughts") -}}
+<script>
+  (function () {
+    'use strict';
+
+    function navigate(direction) {
+      var link = document.querySelector('.paginav .' + direction);
+      if (link && link.href) {
+        window.location.assign(link.href);
+      }
+    }
+
+    function isInteractiveElement(target) {
+      var tag = target.tagName;
+      return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' ||
+        target.isContentEditable || target.closest('a, button, [contenteditable]');
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey || isInteractiveElement(e.target)) return;
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        navigate('prev');
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        navigate('next');
+      }
+    });
+
+    // Touch navigation
+    var touch = { startX: 0, startY: 0, onInteractive: false };
+
+    document.addEventListener('touchstart', function (e) {
+      if (e.touches.length !== 1) return;
+      var t = e.touches[0];
+      touch.startX = t.clientX;
+      touch.startY = t.clientY;
+      touch.onInteractive = isInteractiveElement(e.target);
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      if (e.changedTouches.length !== 1 || touch.onInteractive) return;
+
+      var t = e.changedTouches[0];
+      var dx = t.clientX - touch.startX;
+      var dy = t.clientY - touch.startY;
+
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+        navigate(dx > 0 ? 'prev' : 'next');
+      }
+    }, { passive: true });
+  })();
+</script>
+{{- end -}}
+
+<script>
+  (function () {
+    var footer = document.querySelector('.footer');
+    if (!footer) return;
+
+    var lang = document.documentElement.getAttribute('lang') || 'en';
+    var year = new Date().getFullYear();
+
+    var span = document.createElement('span');
+    var link = document.createElement('a');
+    link.href = 'https://github.com/spyker77/my-mind';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.className = 'footer-link';
+    link.textContent = (lang === 'ru') ? 'Исходный код' : 'Source code';
+
+    span.append('© ' + year + ' ');
+    span.appendChild(link);
+    footer.insertBefore(span, footer.firstChild);
+  })();
+</script>
+
+<script>
+  (function () {
+    var menu = document.getElementById('menu');
+    var langList = document.querySelector('.lang-switch');
+    if (!menu || !langList || menu.querySelector('li.lang-inline')) return;
+
+    var currentLang = document.documentElement.lang || '';
+    var targetLang = currentLang === 'ru' ? 'en' : 'ru';
+    var alt = document.querySelector('link[rel="alternate"][hreflang="' + targetLang + '"]');
+    var altHref = (alt && alt.href) ? alt.href : null;
+    var insertBeforeNode = null;
+    var menuAnchors = menu.querySelectorAll('li > a[href]');
+    for (var i = 0; i < menuAnchors.length; i++) {
+      try {
+        var url = new URL(menuAnchors[i].href, document.baseURI);
+        if (url.pathname.endsWith('/whoami/')) {
+          insertBeforeNode = menuAnchors[i].parentElement.nextSibling;
+          break;
+        }
+      } catch (e) { }
+    }
+
+    var src = langList.querySelector('a[href]');
+    if (!src) return;
+    var li = document.createElement('li');
+    li.className = 'lang-inline';
+    var a = document.createElement('a');
+    a.textContent = src.textContent || (targetLang.toUpperCase());
+    if (src.title) a.title = src.title;
+    var aria = src.getAttribute('aria-label');
+    if (aria) a.setAttribute('aria-label', aria);
+    a.href = altHref || src.href;
+    li.appendChild(a);
+
+    var sep = document.createElement('li');
+    sep.className = 'menu-separator';
+    sep.textContent = '·';
+
+    menu.insertBefore(sep, insertBeforeNode);
+    menu.insertBefore(li, insertBeforeNode);
+
+    langList.style.display = 'none';
+  })();
+</script>
+
+<style>
+  .footer>span:last-of-type {
+    display: none !important;
+  }
+
+  .footer a.footer-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+  }
+</style>

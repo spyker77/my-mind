@@ -1,0 +1,4 @@
+{{- /* Clean titles for Reader Mode - remove site suffix on article pages */ -}}
+{{- if not .IsHome }}
+<script>document.title = document.title.replace(' | {{ .Site.Title }}', '');</script>
+{{- end }}

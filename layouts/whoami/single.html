@@ -1,0 +1,43 @@
+{{- define "main" }}
+
+<main class="main">
+    <div class="profile">
+        <div class="profile_inner">
+            {{- /* Profile Image */ -}}
+            <img draggable="false" src="{{ .Site.Language.Params.profileMode.imageUrl }}"
+                alt="{{ .Site.Language.Params.profileMode.imageTitle }}"
+                title="{{ .Site.Language.Params.profileMode.imageTitle }}"
+                height="{{ .Site.Language.Params.profileMode.imageHeight }}"
+                width="{{ .Site.Language.Params.profileMode.imageWidth }}" />
+
+            {{- /* Name */ -}}
+            <h1>{{ .Site.Language.Params.profileMode.title }}</h1>
+
+            {{- /* Subtitle */ -}}
+            <span>{{ .Site.Language.Params.profileMode.subtitle }}</span>
+
+            {{- /* Social Icons */ -}}
+            {{ partial "social_icons.html" (dict "align" "center") }}
+
+            {{- /* Content */ -}}
+            <div class="profile-content">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+    .profile-content {
+        margin-top: 30px;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    .profile-content p {
+        margin: 15px 0;
+        color: var(--secondary);
+    }
+</style>
+
+{{- end }}{{/* end main */}}

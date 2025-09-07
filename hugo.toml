@@ -1,0 +1,93 @@
+baseURL = 'https://evgeni-sautin.com'
+theme = 'PaperMod'
+defaultContentLanguage = 'ru'
+defaultContentLanguageInSubdir = true
+disableKinds = ["taxonomy", "term", "section"]
+enableRobotsTXT = true
+canonifyURLs = true
+
+[languages]
+[languages.ru]
+languageCode = 'ru'
+languageName = 'Русский'
+title = 'Мои мысли'
+weight = 1
+
+[languages.ru.params]
+author = "Евгений Саутин"
+
+[languages.ru.params.profileMode]
+enabled = false
+title = "Евгений Саутин"
+subtitle = "Футурист · Инженер · Чайноголик"
+imageUrl = "/images/avatar.png"
+imageWidth = 150
+imageHeight = 150
+imageTitle = "Евгений Саутин"
+
+[[languages.ru.menu.main]]
+identifier = "whoami"
+name = "Кто я"
+url = "/whoami/"
+weight = 10
+
+[languages.en]
+languageCode = 'en-us'
+languageName = 'English'
+title = 'My mind'
+weight = 2
+
+[languages.en.params]
+author = "Evgeni Sautin"
+
+[languages.en.params.profileMode]
+enabled = false
+title = "Evgeni Sautin"
+subtitle = "Futurist · Engineer · Teaaholic"
+imageUrl = "/images/avatar.png"
+imageWidth = 150
+imageHeight = 150
+imageTitle = "Evgeni Sautin"
+
+[[languages.en.menu.main]]
+identifier = "whoami"
+name = "Who am I"
+url = "/whoami/"
+weight = 10
+
+[params]
+defaultTheme = "auto"
+ShowBreadCrumbs = false
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowTaxonomyTerms = false
+ShowToc = false
+mainSections = ["thoughts"]
+disableSpecial1stPost = true
+hideMeta = true
+hideFooter = false
+
+[[params.socialIcons]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/evgeni-sautin/"
+
+[[params.socialIcons]]
+name = "GitLab"
+url = "https://gitlab.com/spyker77"
+
+[[params.socialIcons]]
+name = "GitHub"
+url = "https://github.com/spyker77"
+
+[params.footer]
+hideCopyright = true
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[minify]
+minifyOutput = true
+disableXML = false
