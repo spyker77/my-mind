@@ -4,7 +4,7 @@ date: 1984-01-01
 draft: false
 translationKey: "beginning"
 weight: 1
-summary: "What this place is about, what it's not, and for who."
+summary: "What this place is about and what it's not"
 ---
 
 I want to show how I think. How I make decisions. How I see the world. What topics interest me. How I try, and how I fail.

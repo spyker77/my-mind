@@ -4,7 +4,7 @@ date: 1984-01-02
 draft: false
 translationKey: "this-design"
 weight: 2
-summary: "Hugo + PaperMod + GitHub Pages + Cloudflare"
+summary: "Мое обоснование Hugo + PaperMod + GitHub Pages + Cloudflare"
 ---
 
 Мне нужен был простой инструмент, чтобы публиковать мои мысли, причем независимо от платформ, ну и с некоторой гибкостью.
