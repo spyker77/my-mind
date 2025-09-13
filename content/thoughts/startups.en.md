@@ -5,5 +5,4 @@ draft: false
 translationKey: "startups"
 weight: 3
 summary: "Coming soon..."
-description: "Coming soon..."
 ---

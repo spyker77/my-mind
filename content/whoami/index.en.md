@@ -9,5 +9,4 @@ hideAuthor: true
 hideMeta: true
 type: whoami
 summary: "Futurist · Engineer · Teaaholic"
-description: "Futurist · Engineer · Teaaholic"
 ---

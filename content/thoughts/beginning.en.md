@@ -5,9 +5,8 @@ draft: false
 translationKey: "beginning"
 weight: 1
 summary: "What this place is about, what it's not, and for who."
-description: "What this place is about, what it's not, and for who."
 ---
----
+
 I want to show how I think. How I make decisions. How I see the world. What topics interest me. How I try, and how I fail.
 
 You won't find tutorials here—for example, how to write code to solve a specific problem. There is more than enough of that on the internet already. And to write something truly new and useful requires a huge amount of time, which I don’t have—and I’m sure many others don’t either. In today's world, with its speed of change and given my professional focus, even just staying current is incredibly difficult, never mind actually trying things with your own hands and learning something new.

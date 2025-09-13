@@ -9,5 +9,4 @@ hideAuthor: true
 hideMeta: true
 type: whoami
 summary: "Футурист · Инженер · Прагматик"
-description: "Футурист · Инженер · Прагматик"
 ---

@@ -5,9 +5,8 @@ draft: false
 translationKey: "this-design"
 weight: 2
 summary: "Hugo + PaperMod + GitHub Pages + Cloudflare"
-description: "Hugo + PaperMod + GitHub Pages + Cloudflare"
 ---
----
+
 Мне нужен был простой инструмент, чтобы публиковать мои мысли, причем независимо от платформ, ну и с некоторой гибкостью.
 
 Первой идеей было использовать мой основной язык, Python, и написать на Django. Но это казалось слишком сложно для того, что мне нужно. Я хотел еще проще, без серверов, контейнеров, облаков и т.п.
