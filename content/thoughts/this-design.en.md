@@ -9,7 +9,7 @@ summary: "My reasoning behind Hugo + PaperMod + GitHub Pages + Cloudflare"
 
 I needed a simple tool to share my thoughts, platform-independent, but with a bit of flexibility.
 
-My first idea was to use my primary language, Python, and build something with Django. But that quickly felt like too much work for what I needed. I wanted something even simpler—no servers, no containers, no cloud ops, minimum complexity.
+The first idea was to use my primary language, Python, and build something with Django. But that quickly felt like an overengineering. I wanted something even simpler—no servers, no containers, no cloud ops, minimum complexity.
 
 Next, I thought about website builders. Out of the various options, I was leaning toward Squarespace, but $25 a month subscription for a site with no traffic seemed a bit much at this stage. I also looked at Tilda, though blog templates didn’t impress me, it’s still paid, and the menu was laggy when I tried it. There are other options as well, but they’re all more or less the same story.
 
