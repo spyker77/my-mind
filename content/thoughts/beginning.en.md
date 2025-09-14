@@ -13,6 +13,6 @@ You won't find tutorials here—for example, how to write code to solve a specif
 
 For this same reason—the lack of time—I will adhere to an iterative approach, which means the thoughts here will change from time to time. Without any schedule, just when I have the opportunity and something to share. I will add, delete, and rework things so that they reflect my current state of mind. I will raise new topics. And I will try not to use rigid filters. I don't want to seem like a "professional." This is my thought process, as raw as it is in real life.
 
-And honestly, watching how society is developing, I even doubt that my thoughts will be read directly by people. More likely, they will ask an AI to analyze them and create a summary. I don’t fully understand how I feel about that yet, but this is roughly my vision.
+And honestly, watching how society is evolving, I even doubt that my thoughts will be read directly by people. More likely, they will ask an AI to analyze them and create a summary. I don’t fully understand how I feel about that yet, but this is roughly my vision.
 
-That is to say, I plan to answer not the question of "what," but rather "how" and "why.
+That is to say, I plan to answer not the question of "what", but rather "how" and "why".
